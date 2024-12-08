@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consultoria web</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header id="header" class="">
+        <div class="header-cont container">
+            <h1>Consultoria</h1>
+            <h2>Serviços Disponiveis</h2>
+        </div>
+    </header>
+    <p>Formulário</p>
+    <div class="container">
+        <form id="myForm" onsubmit="enviarFormulario" action="http://localhost:3000/api/formulario" method="POST">
+            <label for="Nome">Nome:</label>
+            <input type="texto" id="Nome" name="Nome" required>
+            <label for="Email">Email:</label>
+            <input type="texto" id="Email" name="Email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagemlonga" mensagemlonga="mensagemlonga" rows="10" cols="100"></textarea>
+            <button type="submit" >Enviar Formulário</button>
+        </form>
+      
+        <div id="successMessage" style="display: none;">
+            Mensagem de confirmação: O formulário foi enviado com sucesso!
+        </div>
+        <table class="Tabela-Consulroria" border="2">
+            <thead>
+              <tr>
+                <th>Tipo de Consultoria</th>
+                <th>Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Consultoria Digital</td>
+                <td>Auxiliamos empresas a desenvolverem estratégias digitais eficazes, incluindo SEO, marketing digital e desenvolvimento de sites.</td>
+              </tr>
+              <tr>
+                <td>Consultoria de Comunicação</td>
+                <td>Ajudamos empresas a se comunicarem de forma clara e persuasiva, tanto internamente quanto externamente.</td>
+              </tr>
+              <tr>
+                <td>Consultoria de Gestão</td>
+                <td>Oferecemos suporte para a tomada de decisões estratégicas, planejamento e implementação de mudanças organizacionais.</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
